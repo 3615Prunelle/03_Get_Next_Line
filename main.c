@@ -45,8 +45,6 @@ int	main(int argc, char **argv)
 		if (!grand_final)
 			printf("\n");
 	}
-
-
 	freedom_yolo((void **)&grand_final);
 	return (0);
 }
