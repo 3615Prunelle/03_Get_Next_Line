@@ -13,9 +13,12 @@ OBJS = $(SRCS:.c=.o)
 
 # If I'm on my own machine (campus or home), update the 98 & 99 Folders - UPDATE ALL MAKEFILES w/ home data (whoamI at home is not schappuy)
 UPDATE_PERSO := $(shell whoami)
+CURRENT_DIR = $(shell pwd)
 
 ifeq ($(UPDATE_PERSO), schappuy)
-EXTRA := install
+	ifeq ($(CURRENT_DIR), /home/schappuy/00_Root)
+		EXTRA := install
+	endif
 endif
 
 all: $(NAME) install
