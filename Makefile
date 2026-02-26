@@ -21,7 +21,7 @@ ifeq ($(CURRENT_DIR), 03_Get_Next_Line)
 	endif
 endif
 
-all: $(NAME) install
+all: $(NAME) bonus $(EXTRA)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
